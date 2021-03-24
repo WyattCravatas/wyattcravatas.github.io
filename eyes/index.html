@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <title>Eyes</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        function getNewColor() {
+          var letters = '0123456789ABCDEF';
+          var color = '#';
+          for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+          }
+          return color;
+        }
+        function setRandomColor() {
+          $("#colortarget").css("background", getNewColor());
+        }
+      </script>
+</head>
+
+<body id="colortarget" onclick="setRandomColor()">
+    <h1> Click anywhere to change color!</h1>
+ 
+   
+   
+    <div class="eyes">
+        <div class="eye">
+            <div class="ball"></div>
+        </div>
+        <div class="eye">
+            <div class="ball"></div>
+        </div>
+    </div>
+</body>
+<script src="./eyes.js"></script>
+
+
+</html>
